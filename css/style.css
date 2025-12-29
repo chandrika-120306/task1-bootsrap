@@ -1,53 +1,121 @@
-/* ABOUT PAGE STYLES */
-
-.about-section {
-  background-color: #f8f9fa;
-  padding: 60px 20px;
+/* =========================
+   Global Styles
+========================= */
+:root {
+  --tfi-primary: #7c3aed;   /* violet accent */
+  --tfi-dark: #0f0f14;      /* deep dark background */
+  --tfi-accent: #f59e0b;    /* amber accent */
 }
 
-.about-section h2 {
-  font-weight: 600;
-  margin-bottom: 20px;
+body {
+  background-color: #0b0b10;
+  color: #e5e7eb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
 }
 
-.about-section p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  background: linear-gradient(90deg, #0f0f14, #1a1a22);
 }
-/* CONTACT PAGE STYLES */
-
-.contact-section {
-  padding: 60px 20px;
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+.nav-link {
+  color: #d1d5db !important;
+  transition: color 0.3s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--tfi-accent) !important;
 }
 
-.contact-card {
-  max-width: 600px;
-  margin: auto;
-  padding: 30px;
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  min-height: 400px;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.75));
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn-tfi {
+  background: var(--tfi-primary);
+  color: #fff;
+  border: none;
+}
+.btn-tfi:hover {
+  background: #6d28d9;
+  color: #fff;
+}
+.btn-outline-light:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =========================
+   Section Titles
+========================= */
+.section-title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   Cards
+========================= */
+.card {
+  background: #14141b;
+  border: 1px solid #23232b;
+  color: #d1d5db;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card .card-title {
+  color: #fff;
+}
+
+/* =========================
+   Gallery
+========================= */
+.gallery img {
+  object-fit: cover;
+  height: 220px;
   border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border: 1px solid #23232b;
+  transition: transform 0.3s ease;
 }
-/* About page paragraph borders */
-
-.about-section p {
-  border: 1px solid #dee2e6;   /* light Bootstrap-like border */
-  padding: 15px;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  background-color: #ffffff;
-}
-.contact-section {
-  padding: 40px 0;
-  background-color: #f5f5f5; /* Light background for section */
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
-.contact-card {
-  background-color: #ffffff; /* White background for the form */
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 500px;
-  margin: 0 auto;
+/* =========================
+   Footer
+========================= */
+.footer {
+  background: linear-gradient(90deg, #0f0f14, #1a1a22);
+  color: #9ca3af;
+}
+.footer p {
+  margin: 0;
 }
